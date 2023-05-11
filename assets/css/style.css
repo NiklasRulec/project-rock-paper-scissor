@@ -1,0 +1,273 @@
+/* ! ++++++++++ BASIC ++++++++++ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main: #431277;
+  --dark: #2c0735;
+  --light: #8d92f2;
+  --white: white;
+  --black: black;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+  color: var(--light);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+label {
+  font-size: 2.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ! ++++++++++ SECTION ++++++++++ */
+
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: var(--main);
+}
+/* ! ++++++++++ SECTION ++++++++++ */
+
+.wrapper {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  z-index: 1;
+  border: 2px solid var(--main);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+/* ! ++++++++++ FORM ++++++++++ */
+
+form {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+/* ! ++++++++++ ROUNDS ++++++++++ */
+
+.rounds {
+  width: 100%;
+  height: 10rem;
+  border: 2px solid var(--black);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rounds label {
+  margin: 0 2rem 0 0.5rem;
+}
+
+.rounds input[type="submit"] {
+  width: 10rem;
+  height: 3rem;
+  background-color: var(--main);
+  color: var(--light);
+  border: none;
+  border: 2px solid var(--light);
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+.rounds input[type="submit"]:hover {
+  transform: scale(1.1);
+  background-color: var(--dark);
+}
+
+.rounds-output {
+  width: 100%;
+  height: 10rem;
+  border: 2px solid var(--black);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ! ++++++++++ SCORE-BOARD ++++++++++ */
+
+.score-board {
+  width: 100%;
+  height: 20rem;
+  border: 2px solid var(--black);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.score-board img {
+  width: 7rem;
+}
+
+.user-icon,
+.com-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.user-icon img,
+.com-icon img {
+  margin-bottom: 2rem;
+}
+
+/* ! ++++++++++ BUTTONS ++++++++++ */
+
+.buttons {
+  display: none;
+}
+
+button {
+  width: 10rem;
+  height: 10rem;
+  margin: 0 2rem;
+  padding: 1rem;
+  border: none;
+  border: 2px solid var(--light);
+  border-radius: 10rem;
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* ! ++++++++++ RESTART-BUTTON ++++++++++ */
+
+.restart {
+  width: 10rem;
+  height: 3rem;
+  background-color: var(--main);
+  color: var(--light);
+  border: none;
+  border: 2px solid var(--light);
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restart:hover {
+  transform: scale(1.1);
+  background-color: var(--dark);
+}
+
+/* ! ++++++++++ ANIMATION ++++++++++ */
+
+.animation {
+  display: none;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  z-index: 5;
+  background-color: var(--light);
+  border: 2px solid var(--main);
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.animation img {
+  width: 30%;
+  animation: move 1s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(60px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ! ++++++++++ MOBILE ++++++++++ */
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  label {
+    font-size: 1.5rem;
+  }
+
+  .wrapper {
+    height: 95%;
+    width: 95%;
+    top: 2.5%;
+    left: 2.5%;
+  }
+
+  form {
+    width: 95%;
+  }
+
+  .score-board .user-pick,
+  .score-board .com-pick {
+    width: 5rem;
+  }
+
+  .buttons button {
+    width: 6rem;
+    height: 6rem;
+  }
+}

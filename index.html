@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <section>
+      <article class="wrapper">
+        <h1>Schere-Stein-Papier</h1>
+        <!-- ! ########## ROUND-COUNTER ########## -->
+        <form onsubmit="roundCounter();return false">
+          <h2>Wie viele Runden möchtest du spielen?</h2>
+          <article class="rounds">
+            <input type="radio" name="rounds" value="5" required />
+            <label>5</label>
+            <input type="radio" name="rounds" value="10" required />
+            <label>10</label>
+            <input type="radio" name="rounds" value="15" required />
+            <label>15</label>
+            <input type="radio" name="rounds" value="20" required />
+            <label>20</label>
+            <input type="submit" value="Spiel starten" />
+          </article>
+          <!-- ! ########## ROUNDS-OUTPUT ########## -->
+          <article class="rounds-output">
+            <h2 class="rounds-output-counter"></h2>
+          </article>
+          <!-- ! ########## SCORE-BOARD ########## -->
+          <h2>Score-Board</h2>
+          <article class="score-board">
+            <div class="user-icon">
+              <img src="./assets/img/User.png" alt="User" />
+              <h3>User</h3>
+            </div>
+            <img class="user-pick" src="" alt="" />
+            <h3 class="user-score">0</h3>
+            <h3>:</h3>
+            <h3 class="com-score">0</h3>
+            <img class="com-pick" src="" alt="" />
+            <div class="com-icon">
+              <img src="./assets/img/Computer.png" alt="Computer" />
+              <h3>COM</h3>
+            </div>
+          </article>
+          <!-- ! ########## GAME-COMMENT ########## -->
+          <article class="game-comment">
+            <h2 class="comment">Let's play!</h2>
+          </article>
+          <!-- ! ########## BUTTONS ########## -->
+          <article class="buttons">
+            <button onclick="userSchere()">
+              <img src="./assets/img/Schere.png" alt="Schere" />
+            </button>
+            <button onclick="userStein()">
+              <img src="./assets/img/Stein.png" alt="Stein" />
+            </button>
+            <button onclick="userPapier()">
+              <img src="./assets/img/Papier.png" alt="Papier" />
+            </button>
+          </article>
+        </form>
+        <!-- ! ########## RESTART-BUTTON ########## -->
+        <button onclick="restartFunction()" class="restart">RESTART</button>
+      </article>
+      <!-- ! ########## ANIMATION ########## -->
+      <div class="animation">
+        <img src="./assets/img/Faust User.png" alt="Faust User" />
+        <img src="./assets/img/Faust Com.png" alt="Faust Com" />
+      </div>
+    </section>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
