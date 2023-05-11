@@ -14,9 +14,15 @@
   --black: black;
 }
 
+@font-face {
+  font-family: "Regular";
+  src: url(../font/Montserrat/static/Montserrat-Regular.ttf);
+}
+
 html {
   font-size: 62.5%;
   overflow: hidden;
+  font-family: "Regular";
   color: var(--light);
 }
 
