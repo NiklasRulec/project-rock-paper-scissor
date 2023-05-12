@@ -60,7 +60,7 @@ function userSchere() {
     document.querySelector(".com-pick").src = "./assets/img/Echse.png";
     userScore++;
   } else if (userInput == 1 && comInput == 5) {
-    // ! +++++++++++ Sieg User +++++++++++
+    // ! +++++++++++ Sieg Com +++++++++++
     document.querySelector(".comment").innerText = "Com gewinnt";
     document.querySelector(".user-pick").src = "./assets/img/Schere.png";
     document.querySelector(".com-pick").src = "./assets/img/Spock.png";
@@ -117,7 +117,7 @@ function userStein() {
     document.querySelector(".com-pick").src = "./assets/img/Papier.png";
     comScore++;
   } else if (userInput == 2 && comInput == 4) {
-    // ! +++++++++++ Sieg Com +++++++++++
+    // ! +++++++++++ Sieg User +++++++++++
     document.querySelector(".comment").innerText = "User gewinnt";
     document.querySelector(".user-pick").src = "./assets/img/Stein.png";
     document.querySelector(".com-pick").src = "./assets/img/Echse.png";
@@ -162,7 +162,7 @@ function userPapier() {
   let comInput = Math.round(Math.random() * (max - min) + min);
 
   if (userInput == comInput) {
-    // ! +++++++++++ Sieg User +++++++++++
+    // ! +++++++++++ Unentschieden +++++++++++
     document.querySelector(".comment").innerText = "Unentschieden";
     document.querySelector(".user-pick").src = "./assets/img/Papier.png";
     document.querySelector(".com-pick").src = "./assets/img/Papier.png";
@@ -181,7 +181,7 @@ function userPapier() {
     document.querySelector(".com-pick").src = "./assets/img/Stein.png";
     userScore++;
   } else if (userInput == 3 && comInput == 4) {
-    // ! +++++++++++ Sieg User +++++++++++
+    // ! +++++++++++ Sieg Com +++++++++++
     document.querySelector(".comment").innerText = "Com gewinnt";
     document.querySelector(".user-pick").src = "./assets/img/Papier.png";
     document.querySelector(".com-pick").src = "./assets/img/Echse.png";
@@ -226,7 +226,7 @@ function userEchse() {
   let comInput = Math.round(Math.random() * (max - min) + min);
 
   if (userInput == comInput) {
-    // ! +++++++++++ Sieg User +++++++++++
+    // ! +++++++++++ Unentschieden +++++++++++
     document.querySelector(".comment").innerText = "Unentschieden";
     document.querySelector(".user-pick").src = "./assets/img/Echse.png";
     document.querySelector(".com-pick").src = "./assets/img/Echse.png";
@@ -239,7 +239,7 @@ function userEchse() {
     document.querySelector(".com-pick").src = "./assets/img/Schere.png";
     comScore++;
   } else if (userInput == 4 && comInput == 2) {
-    // ! +++++++++++ Sieg User +++++++++++
+    // ! +++++++++++ Sieg Com +++++++++++
     document.querySelector(".comment").innerText = "Com gewinnt";
     document.querySelector(".user-pick").src = "./assets/img/Echse.png";
     document.querySelector(".com-pick").src = "./assets/img/Stein.png";
@@ -290,18 +290,18 @@ function userSpock() {
   let comInput = Math.round(Math.random() * (max - min) + min);
 
   if (userInput == comInput) {
-    // ! +++++++++++ Sieg User +++++++++++
+    // ! +++++++++++ Unentschieden +++++++++++
     document.querySelector(".comment").innerText = "Unentschieden";
     document.querySelector(".user-pick").src = "./assets/img/Spock.png";
     document.querySelector(".com-pick").src = "./assets/img/Spock.png";
     comScore++;
     userScore++;
   } else if (userInput == 5 && comInput == 1) {
-    // ! +++++++++++ Sieg Com +++++++++++
+    // ! +++++++++++ Sieg User +++++++++++
     document.querySelector(".comment").innerText = "User gewinnt";
     document.querySelector(".user-pick").src = "./assets/img/Spock.png";
     document.querySelector(".com-pick").src = "./assets/img/Schere.png";
-    comScore++;
+    userScore++;
   } else if (userInput == 5 && comInput == 2) {
     // ! +++++++++++ Sieg User +++++++++++
     document.querySelector(".comment").innerText = "User gewinnt";
@@ -309,13 +309,13 @@ function userSpock() {
     document.querySelector(".com-pick").src = "./assets/img/Stein.png";
     userScore++;
   } else if (userInput == 5 && comInput == 3) {
-    // ! +++++++++++ Sieg User +++++++++++
+    // ! +++++++++++ Sieg Com +++++++++++
     document.querySelector(".comment").innerText = "Com gewinnt";
     document.querySelector(".user-pick").src = "./assets/img/Spock.png";
     document.querySelector(".com-pick").src = "./assets/img/Papier.png";
     comScore++;
   } else if (userInput == 5 && comInput == 4) {
-    // ! +++++++++++ Sieg User +++++++++++
+    // ! +++++++++++ Sieg Com +++++++++++
     document.querySelector(".comment").innerText = "Com gewinnt";
     document.querySelector(".user-pick").src = "./assets/img/Spock.png";
     document.querySelector(".com-pick").src = "./assets/img/Echse.png";
