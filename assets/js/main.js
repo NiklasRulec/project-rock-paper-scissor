@@ -17,7 +17,8 @@ const roundCounter = () => {
   roundsInput = document.querySelector('input[name="rounds"]:checked').value;
   document.querySelector(".rounds").style.display = "none";
   document.querySelector(".rounds-output").style.display = "flex";
-  document.querySelector(".buttons").style.display = "block";
+  document.querySelector(".rounds-header").innerText = "Round-Counter";
+  document.querySelector(".buttons").style.display = "flex";
   document.querySelector(".rounds-output-counter").innerText =
     roundCount + " / " + roundsInput;
   return roundsInput;
@@ -187,3 +188,9 @@ function animationFunction() {
     animationContainer.style.display = "none";
   }, 1200);
 }
+
+// ! #################### MODE-TOGGLE ####################
+
+const modeToggle = () => {
+  document.querySelector(".bg").classList.toggle("mode");
+};

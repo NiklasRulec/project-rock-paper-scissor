@@ -10,7 +10,7 @@
   <body>
     <section class="bg">
       <article class="wrapper">
-        <h1>Schere-Stein-Papier</h1>
+        <h1>Schere-Stein-Papier-Echse-Spock</h1>
         <!-- ! ########## ROUND-COUNTER ########## -->
         <form onsubmit="roundCounter();return false">
           <h2 class="rounds-header">Wie viele Runden möchtest du spielen?</h2>
@@ -48,7 +48,7 @@
           </article>
           <!-- ! ########## GAME-COMMENT ########## -->
           <article class="game-comment">
-            <h3 class="comment">Let's play!</h3>
+            <h2 class="comment">Let's play!</h2>
           </article>
           <!-- ! ########## BUTTONS ########## -->
           <article class="buttons">
@@ -70,12 +70,42 @@
               </button>
               <h4>Papier</h4>
             </div>
+            <div class="button-label">
+              <button onclick="userEchse()">
+                <img src="./assets/img/Echse.png" alt="Echse" />
+              </button>
+              <h4>Echse</h4>
+            </div>
+            <div class="button-label">
+              <button onclick="userSpock()">
+                <img src="./assets/img/Spock.png" alt="Spock" />
+              </button>
+              <h4>Spock</h4>
+            </div>
           </article>
         </form>
         <!-- ! ########## RESTART-BUTTON ########## -->
         <div class="nav-buttons">
           <button onclick="restartFunction()" class="restart">RESTART</button>
-          <a href="./advanced.html">ADVANCED</a>
+          <a href="./index.html">BASIC</a>
+        </div>
+        <!-- ! ########## RULES ########## -->
+        <button onclick="rulesFunction()" class="rules-button">
+          REGELN EINBLENDEN
+        </button>
+        <div class="rules">
+          <p>
+            Schere schneidet Papier,<br />
+            Papier bedeckt Stein,<br />
+            Stein zerquetscht Echse,<br />
+            Echse vergiftet Spock,<br />
+            Spock zertrümmert Schere,<br />
+            Schere köpft Echse,<br />
+            Echse frisst Papier,<br />
+            Papier widerlegt Spock,<br />
+            Spock verdampft Stein,<br />
+            Stein zertrümmert Schere.
+          </p>
         </div>
       </article>
       <!-- ! ########## ANIMATION ########## -->
@@ -84,6 +114,6 @@
         <img src="./assets/img/Faust Com.png" alt="Faust Com" />
       </div>
     </section>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/advanced.js"></script>
   </body>
 </html>
