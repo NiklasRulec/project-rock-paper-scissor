@@ -188,9 +188,3 @@ function animationFunction() {
     animationContainer.style.display = "none";
   }, 1200);
 }
-
-// ! #################### MODE-TOGGLE ####################
-
-const modeToggle = () => {
-  document.querySelector(".bg").classList.toggle("mode");
-};

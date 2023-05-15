@@ -299,26 +299,49 @@ a:hover {
   justify-content: space-around;
 }
 
-.animation img {
+.userFist {
   width: 30%;
-  animation: move 1s;
+  animation: moveUser 1s;
 }
 
-@keyframes move {
+.comFist {
+  width: 30%;
+  animation: moveCom 1s;
+}
+
+@keyframes moveUser {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
   }
   25% {
-    transform: translateY(60px);
+    transform: translateY(60px) rotate(30deg);
   }
   50% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
   }
   75% {
-    transform: translateY(60px);
+    transform: translateY(60px) rotate(30deg);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes moveCom {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(60px) rotate(-30deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(60px) rotate(-30deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
   }
 }
 
